@@ -1,0 +1,866 @@
+<script>
+  import { Link } from 'svelte-routing';
+  import ThemeToggle from '../lib/components/ThemeToggle.svelte';
+  import Button from '../lib/components/ui/button/button.svelte';
+  import * as Card from '../lib/components/ui/card';
+  import { Package, TrendingUp, Users, Shield, Zap, BarChart3 } from 'lucide-svelte';
+</script>
+
+<div class="landing-page">
+  <nav class="landing-nav">
+    <div class="container nav-content">
+      <div class="logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 4L16 2L24 4L28 8V16L24 20L16 28L8 20L4 16V8L8 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M12 12L16 8L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16 8V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>FerreLink</span>
+      </div>
+      
+      <div class="nav-actions">
+        <ThemeToggle />
+        <Link to="/login">
+          <Button variant="ghost" size="sm">Iniciar Sesión</Button>
+        </Link>
+        <Link to="/register">
+          <Button variant="primary" size="sm">Comenzar</Button>
+        </Link>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">
+          La ferretería del futuro<br/>
+          empieza hoy
+        </h1>
+        <p class="hero-subtitle">
+          Deja atrás las hojas de cálculo y los cuadernos. FerreLink es el 
+          sistema diseñado específicamente para ferreterías que quieren crecer.
+        </p>
+        <div class="hero-actions">
+          <Link to="/register">
+            <Button variant="primary" size="lg">Prueba Gratis por 30 Días</Button>
+          </Link>
+          <Link to="/login">
+            <Button variant="ghost" size="lg">Ver Demo</Button>
+          </Link>
+        </div>
+        <p class="hero-note">Sin tarjeta de crédito • Configuración en 10 minutos • Soporte en español</p>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="tools-grid">
+          <!-- Wrench -->
+          <div class="tool-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M48 16L52 12C54.2091 9.79086 54.2091 6.20914 52 4C49.7909 1.79086 46.2091 1.79086 44 4L40 8L32 16L28 20L20 28L16 32L12 36C9.79086 38.2091 9.79086 41.7909 12 44C14.2091 46.2091 17.7909 46.2091 20 44L24 40L32 32L40 24L48 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M28 20L20 28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          
+          <!-- Hammer -->
+          <div class="tool-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="4" width="20" height="8" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M18 8L32 22L52 42C54.2091 44.2091 54.2091 47.7909 52 50C49.7909 52.2091 46.2091 52.2091 44 50L24 30L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          
+          <!-- Screwdriver -->
+          <div class="tool-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 4L44 8L36 16L32 20L28 24L8 44C5.79086 46.2091 5.79086 49.7909 8 52C10.2091 54.2091 13.7909 54.2091 16 52L36 32L40 28L48 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="38" y="2" width="8" height="12" rx="1" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          
+          <!-- Drill -->
+          <div class="tool-card">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="8" y="20" width="32" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
+              <circle cx="48" cy="28" r="8" stroke="currentColor" stroke-width="2"/>
+              <path d="M40 28H56" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <rect x="14" y="24" width="4" height="8" fill="currentColor"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">200+</div>
+          <div class="stat-label">Ferreterías activas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">45min</div>
+          <div class="stat-label">Tiempo promedio ahorrado por día</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">98%</div>
+          <div class="stat-label">Menos errores en inventario</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">Acceso desde cualquier lugar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <h2>Así de simple es empezar</h2>
+        <p>No necesitas ser experto en tecnología. Si sabes usar WhatsApp, sabes usar FerreLink.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Crea tu cuenta</h3>
+          <p>Registra tu ferretería en menos de 2 minutos. Solo necesitas un correo.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Agrega tus productos</h3>
+          <p>Empieza con lo que vendes más. Puedes importar desde Excel o agregar uno por uno.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Ya está</h3>
+          <p>Comienza a vender y llevar control. El sistema aprende mientras lo usas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2>Porque tu ferretería no es como las demás</h2>
+        <p>Cada negocio es diferente. FerreLink se adapta a como TÚ trabajas.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Simple, no complicado</h3>
+          <p>Sin cursos de capacitación ni tutoriales de 3 horas. Abres y ya sabes usarlo.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Velocidad donde importa</h3>
+          <p>Atiende más clientes en menos tiempo. Cada segundo cuenta cuando hay fila.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Adiós a "se me acabó"</h3>
+          <p>Te avisa cuando algo está por agotarse. Nunca más pierdas una venta por falta de stock.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+              <rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+              <rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+              <rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Ves todo en un lugar</h3>
+          <p>¿Cuánto vendiste hoy? ¿Qué productos van mejor? Un vistazo y ya sabes.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21V5C16 3.89543 15.1046 3 14 3H10C8.89543 3 8 3.89543 8 5V21M3 21H21M3 10H8M16 10H21M8 14H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Crece sin cambiar de sistema</h3>
+          <p>Desde el día uno hasta cuando tengas 5 sucursales. No hay límites.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Dale acceso a tu equipo</h3>
+          <p>Cada empleado con su usuario. Controlas quién ve qué y listo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Antes llevaba todo en un cuaderno. Perdí como 3 ventas por no saber si tenía stock. 
+            Ahora con FerreLink veo todo al instante y ya no me pasa."
+          </p>
+          <div class="testimonial-author">
+            <strong>Roberto Martínez</strong>
+            <span>Ferretería El Tornillo, Santa Ana</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Lo mejor es que mis empleados lo aprendieron en una tarde. No tuvimos que cerrar 
+            ni hacer capacitaciones largas. Instalamos y ya."
+          </p>
+          <div class="testimonial-author">
+            <strong>María Elena Flores</strong>
+            <span>Ferretería y Materiales Flores, San Salvador</span>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Me ahorro como 2 horas al día que antes usaba contando inventario manualmente. 
+            Ahora puedo atender más clientes y el negocio va mejor."
+          </p>
+          <div class="testimonial-author">
+            <strong>Carlos Hernández</strong>
+            <span>Ferretería La Económica, San Miguel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2>Preguntas frecuentes</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3>¿Necesito internet todo el tiempo?</h3>
+          <p>Sí, necesitas conexión a internet. Pero si se te cae un momento, guardamos lo último 
+          que hiciste y se sincroniza cuando vuelva.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Puedo usarlo en mi celular?</h3>
+          <p>Sí, funciona en cualquier navegador. No necesitas instalar nada, solo entras desde 
+          tu teléfono, tablet o computadora.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Qué pasa con mis datos si me cambio de sistema?</h3>
+          <p>Tus datos son tuyos. Puedes exportar todo a Excel cuando quieras. No hay sorpresas.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Y si no sé nada de computadoras?</h3>
+          <p>No importa. Lo hicimos pensando en eso. Si sabes enviar un mensaje, 
+          ya sabes lo suficiente. Y si no, te ayudamos por teléfono.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Cuánto cuesta realmente?</h3>
+          <p>Prueba gratis 30 días sin poner tarjeta. Después son $29/mes para una ferretería 
+          pequeña. Sin costos ocultos ni cobros sorpresa.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>¿Puedo cancelar cuando quiera?</h3>
+          <p>Sí, cancelas cuando quieras. Sin ataduras ni penalizaciones. Exportas tus datos y listo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Deja de batallar con Excel y cuadernos</h2>
+        <p>Únete a las ferreterías que ya están trabajando más tranquilas</p>
+        <div class="cta-actions">
+          <Link to="/register">
+            <Button variant="primary" size="lg">Probar Gratis 30 Días</Button>
+          </Link>
+        </div>
+        <p class="cta-note">No pedimos tarjeta • Cancela cuando quieras • Soporte real en español</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 4L16 2L24 4L28 8V16L24 20L16 28L8 20L4 16V8L8 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M12 12L16 8L20 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 8V20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>FerreLink</span>
+          </div>
+          <p>Sistema de gestión para ferreterías</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Producto</h4>
+            <a href="#features">Características</a>
+            <a href="#pricing">Precios</a>
+            <a href="#docs">Documentación</a>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Empresa</h4>
+            <a href="#about">Nosotros</a>
+            <a href="#contact">Contacto</a>
+            <a href="#support">Soporte</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 FerreLink. Sistema de gestión empresarial.</p>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<style>
+  .landing-page {
+    min-height: 100vh;
+    background: var(--bg-primary);
+  }
+
+  /* Navigation */
+  .landing-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-elevated);
+    border-bottom: 1px solid var(--border-primary);
+    backdrop-filter: blur(8px);
+    padding: var(--space-md) 0;
+  }
+
+  .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--accent-primary);
+  }
+
+  .logo svg {
+    color: var(--accent-primary);
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: var(--space-2xl) 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+    align-items: center;
+  }
+
+  .hero-content {
+    max-width: 600px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: var(--space-lg);
+    color: var(--fg-primary);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-xl);
+    color: var(--fg-tertiary);
+    margin-bottom: var(--space-xl);
+    line-height: var(--leading-relaxed);
+  }
+
+  .hero-note {
+    margin-top: var(--space-lg);
+    font-size: var(--text-sm);
+    color: var(--fg-muted);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: var(--space-md);
+  }
+
+  .hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-lg);
+  }
+
+  .tool-card {
+    width: 140px;
+    height: 140px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+  }
+
+  .tool-card:hover {
+    transform: translateY(-8px) rotate(5deg);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-primary);
+  }
+
+  .tool-card svg {
+    width: 64px;
+    height: 64px;
+    color: var(--accent-primary);
+  }
+
+  .tool-card:nth-child(2) {
+    transform: translateY(20px);
+  }
+
+  .tool-card:nth-child(3) {
+    transform: translateY(40px);
+  }
+
+  /* Features Section */
+  .features {
+    padding: calc(var(--space-2xl) * 2) 0;
+    background: var(--bg-secondary);
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto var(--space-2xl);
+  }
+
+  .section-header h2 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-header p {
+    font-size: var(--text-lg);
+    color: var(--fg-tertiary);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-xl);
+  }
+
+  .feature-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    transition: all var(--transition-base);
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent-primary);
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-lg);
+  }
+
+  .feature-icon svg {
+    width: 24px;
+    height: 24px;
+    color: white;
+  }
+
+  .feature-card h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
+    color: var(--fg-primary);
+  }
+
+  .feature-card p {
+    color: var(--fg-tertiary);
+    line-height: var(--leading-relaxed);
+  }
+
+  /* CTA Section */
+  .cta {
+    padding: calc(var(--space-2xl) * 2) 0;
+    background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  }
+
+  .cta-content {
+    text-align: center;
+    color: white;
+  }
+
+  .cta-content h2 {
+    font-size: var(--text-4xl);
+    margin-bottom: var(--space-md);
+    color: white;
+  }
+
+  .cta-content p {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-2xl);
+    opacity: 0.9;
+  }
+
+  .cta-note {
+    margin-top: var(--space-lg);
+    font-size: var(--text-sm);
+    opacity: 0.8;
+  }
+
+  .cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+  }
+
+  /* Stats Section */
+  .stats {
+    padding: var(--space-2xl) 0;
+    background: var(--bg-secondary);
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: 3rem;
+    font-weight: var(--font-bold);
+    color: var(--accent-primary);
+    margin-bottom: var(--space-sm);
+  }
+
+  .stat-label {
+    font-size: var(--text-sm);
+    color: var(--fg-tertiary);
+  }
+
+  /* How It Works */
+  .how-it-works {
+    padding: calc(var(--space-2xl) * 2) 0;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-2xl);
+    margin-top: var(--space-2xl);
+  }
+
+  .step-card {
+    text-align: center;
+  }
+
+  .step-number {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    margin: 0 auto var(--space-lg);
+  }
+
+  .step-card h3 {
+    margin-bottom: var(--space-md);
+  }
+
+  .step-card p {
+    color: var(--fg-tertiary);
+    line-height: var(--leading-relaxed);
+  }
+
+  /* Testimonials */
+  .testimonials {
+    padding: calc(var(--space-2xl) * 2) 0;
+    background: var(--bg-secondary);
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+    margin-top: var(--space-2xl);
+  }
+
+  .testimonial-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-primary);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+  }
+
+  .testimonial-text {
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+    color: var(--fg-secondary);
+    margin-bottom: var(--space-lg);
+    font-style: italic;
+  }
+
+  .testimonial-author strong {
+    display: block;
+    color: var(--fg-primary);
+    margin-bottom: var(--space-xs);
+  }
+
+  .testimonial-author span {
+    font-size: var(--text-sm);
+    color: var(--fg-tertiary);
+  }
+
+  /* FAQ */
+  .faq {
+    padding: calc(var(--space-2xl) * 2) 0;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+    margin-top: var(--space-2xl);
+  }
+
+  .faq-item h3 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-md);
+    color: var(--fg-primary);
+  }
+
+  .faq-item p {
+    color: var(--fg-tertiary);
+    line-height: var(--leading-relaxed);
+  }
+
+  /* Footer */
+  .footer {
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border-primary);
+    padding: var(--space-2xl) 0 var(--space-lg);
+  }
+
+  .footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--space-2xl);
+    margin-bottom: var(--space-2xl);
+  }
+
+  .footer-brand p {
+    color: var(--fg-tertiary);
+    margin-top: var(--space-sm);
+  }
+
+  .footer-links {
+    display: flex;
+    gap: var(--space-2xl);
+  }
+
+  .footer-column h4 {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--fg-secondary);
+    margin-bottom: var(--space-md);
+  }
+
+  .footer-column a {
+    display: block;
+    color: var(--fg-tertiary);
+    margin-bottom: var(--space-sm);
+    transition: color var(--transition-fast);
+  }
+
+  .footer-column a:hover {
+    color: var(--accent-primary);
+  }
+
+  .footer-bottom {
+    border-top: 1px solid var(--border-primary);
+    padding-top: var(--space-lg);
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    color: var(--fg-tertiary);
+    font-size: var(--text-sm);
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .hero .container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 100%;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-actions {
+      justify-content: center;
+    }
+
+    .tools-grid {
+      justify-content: center;
+    }
+
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+
+    .nav-actions {
+      gap: var(--space-sm);
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-grid,
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .tools-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+    }
+
+    .tool-card {
+      width: 100px;
+      height: 100px;
+    }
+
+    .tool-card svg {
+      width: 48px;
+      height: 48px;
+    }
+
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+
+    .stat-number {
+      font-size: 2rem;
+    }
+  }
+</style>
