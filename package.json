@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "vite preview --host 0.0.0.0 --port 3000"
+    "start": "serve -s dist -l 3000"
   },
   "devDependencies": {
     "@fontsource/nunito-sans": "^5.2.7",
@@ -29,6 +29,7 @@
     "date-fns": "^4.1.0",
     "lucide-svelte": "^0.563.0",
     "nanoid": "^5.1.6",
+    "serve": "^14.2.5",
     "svelte-routing": "^2.13.0"
   }
 }
